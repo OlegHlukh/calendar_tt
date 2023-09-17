@@ -1,5 +1,6 @@
 import { makeAutoObservable } from 'mobx';
 import { v4 as uuid } from 'uuid';
+import { initTask } from '../../data/task.ts';
 export interface Task {
   id: string;
   title: string;
@@ -13,7 +14,7 @@ class Tasks {
   filterByLabel: string;
 
   constructor() {
-    this.tasks = new Map();
+    this.tasks = initTask();
     this.filterByTitle = '';
     this.filterByLabel = '';
 

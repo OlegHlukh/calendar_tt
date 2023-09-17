@@ -12,7 +12,7 @@ export const Root = styled.div<{ disable: boolean }>`
   overflow: auto;
 
   border-radius: 5px;
-  height: 18rem;
+  height: 22rem;
 
   & strong {
     font-size: 1.6rem;

@@ -38,8 +38,6 @@ const Grid: FC = () => {
         destination.index,
       );
     }
-
-    console.log(result);
   };
 
   return (

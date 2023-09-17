@@ -1,4 +1,5 @@
 import { v4 as uuid } from 'uuid';
+import { labels } from '../../data/labels.ts';
 
 export interface Label {
   id: string;
@@ -10,7 +11,7 @@ class LabelStore {
   labels: Label[];
 
   constructor() {
-    this.labels = [];
+    this.labels = labels;
   }
 
   createLabel = (label: Omit<Label, 'id'>) => {

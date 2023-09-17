@@ -6,10 +6,7 @@ import LabelSelect from '../label/LabelSelect.tsx';
 const FilterByLabel: FC = () => {
   const {
     tasks: { changeFilterByLabel },
-    label,
   } = useStores();
-
-  console.log(label, 'from filter');
 
   const handeChange = (value: string) => {
     changeFilterByLabel(value);
