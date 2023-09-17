@@ -6,25 +6,20 @@ import { observer } from 'mobx-react-lite';
 import { getDays } from './Days.utils.ts';
 import { DragDropContext, DropResult } from 'react-beautiful-dnd';
 import { Container } from '../ui/container.ts';
+import DaysOfWeek from '../DaysOfWeek.tsx';
 
-const Days: FC = () => {
+const Grid: FC = () => {
   const {
-    dates: { year, month, holidays, fetchHolidays },
+    dates: { year, month },
   } = useStores();
-
-  useEffect(() => {
-    fetchHolidays(2023, 'ua');
-  }, []);
 
   const {
     tasks: { changeDate, changeOrder },
   } = useStores();
 
-  console.log(holidays);
-
   useEffect(() => {}, []);
 
-  const days = useMemo(() => getDays(year, month), [month, year]);
+  const cells = useMemo(() => getDays(year, month), [month, year]);
 
   const onDragEnd = (result: DropResult) => {
     if (!result.destination) {
@@ -49,9 +44,10 @@ const Days: FC = () => {
 
   return (
     <Container>
+      <DaysOfWeek />
       <DragDropContext onDragEnd={onDragEnd}>
         <Root>
-          {days.map((day) => (
+          {cells.map((day) => (
             <Cell date={day} />
           ))}
         </Root>
@@ -60,4 +56,4 @@ const Days: FC = () => {
   );
 };
 
-export default observer(Days);
+export default observer(Grid);
