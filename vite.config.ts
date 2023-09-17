@@ -4,6 +4,6 @@ import svgr from 'vite-plugin-svgr';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/calendar_tt',
+  base: '/calendar_tt/',
   plugins: [react(), svgr()],
 });

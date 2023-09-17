@@ -1,4 +1,5 @@
 {
+  "homepage": "https://oleghlukh.github.io/calendar_tt/",
   "name": "calendar-tt",
   "private": true,
   "version": "0.0.0",
@@ -47,6 +48,7 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "gh-pages": "^6.0.0",
     "prettier": "^3.0.3",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
