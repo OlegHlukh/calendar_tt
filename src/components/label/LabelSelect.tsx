@@ -25,8 +25,6 @@ const LabelSelect: FC<LabelSelectProps> = ({
     label: { labels },
   } = useStores();
 
-  console.log(labels);
-
   const options = useMemo(() => {
     const options = labels.map((el) => ({
       label: el.title,

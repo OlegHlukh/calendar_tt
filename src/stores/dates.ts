@@ -58,8 +58,6 @@ class DatesStore {
   };
 
   get monthName() {
-    console.log(this.month);
-
     return MONTHS[this?.month];
   }
 
