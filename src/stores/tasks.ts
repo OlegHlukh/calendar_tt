@@ -18,6 +18,8 @@ class Tasks {
     this.filterByTitle = '';
     this.filterByLabel = '';
 
+    console.log(this.tasks);
+
     makeAutoObservable(this);
   }
 
