@@ -26,7 +26,7 @@ export const CardHeader = styled.div`
   padding-bottom: 1rem;
 
   & strong {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   & span {
